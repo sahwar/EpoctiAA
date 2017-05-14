@@ -1,11 +1,11 @@
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-public class EpoctiAntiAliaser{
+class EpoctiAntiAliaser{
 	private BufferedImage img;
 	private int chkRgb, r, g, b, a;
 
-	public EpoctiAntiAliaser(int r, int g, int b, int a, BufferedImage img){
+	EpoctiAntiAliaser(int r, int g, int b, int a, BufferedImage img){
 		this.r = r;
 		this.g = g;
 		this.b = b;
@@ -14,7 +14,7 @@ public class EpoctiAntiAliaser{
 		this.img = img;
 	}
 
-	public BufferedImage antiAlias(){
+	BufferedImage antiAlias(){
 		// TODO: Make it so that, if a non 0-alpha pixel needs to be edited, do so by adding the checking color on top of the current pixel
 		BufferedImage aaImg = img;
 		for (int y = 0; y < aaImg.getHeight(); y++){
